@@ -1,9 +1,137 @@
-<html>  
-    <body>
-        <h1>Bio</h1>
-        <h2> Hello! This is my Bio</h2>
-        <img src="./FullSizeRender.png" style="height: 300px;">
-        <h5>Student of MIM at UMD</h5>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            transition: background 0.5s ease;
+        }
 
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .about-header {
+            padding: 20px 0;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        .about-header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            animation: fadeIn 2s;
+        }
+
+        .about-header h2 {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            text-align: center;
+            margin-bottom: 25px;
+            animation: slideIn 2s;
+        }
+
+        .profile-img img {
+            height: 250px;
+            width: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio-content {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s;
+        }
+
+        .bio-content h5 {
+            font-size: 1.2rem;
+        }
+
+        .change-bg-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .change-bg-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .profile-img img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <h2>Welcome to my portfolio!</h2>
+        </div>
+
+        <div class="profile-img">
+            <img src="./FullSizeRender.png" alt="Profile Picture">
+        </div>
+
+        <div class="bio-content">
+            <h5></h5>
+            <p>Excited to explore new opportunities in the field of information management.</p>
+        </div>
+
+        /*<button class="change-bg-btn" onclick="changeBackground()">Change Background</button>*/
+    </div>
+
+    <script>
+        // JavaScript function to change background color dynamically
+        function changeBackground() {
+            const colors = ['#FAD02E', '#E74C3C', '#9B59B6', '#1ABC9C', '#3498DB', '#34495E'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = randomColor;
+        }
+    </script>
+
+</body>
 </html>
